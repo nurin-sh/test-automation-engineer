@@ -7,9 +7,9 @@ import { UpdateComponent } from './update/update.component';
 
 const routes: Routes = [
   { path: 'list', component: ListComponent },
-  { path: 'show/:productId', component: ShowComponent },
   { path: 'create', component: CreateComponent },
   { path: 'update/:productId', component: UpdateComponent },
+  { path: ':productId', component: ShowComponent },
   { path: '', redirectTo: 'list', pathMatch: 'full' }
 ];
 
