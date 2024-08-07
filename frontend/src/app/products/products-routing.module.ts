@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'list', component: ListComponent },
   { path: 'show/:productId', component: ShowComponent },
   { path: 'create', component: CreateComponent },
-  { path: 'update/productId', component: UpdateComponent },
+  { path: 'update/:productId', component: UpdateComponent },
   { path: '', redirectTo: 'list', pathMatch: 'full' }
 ];
 
