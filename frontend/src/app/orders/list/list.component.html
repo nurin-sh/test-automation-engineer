@@ -1,1 +1,29 @@
-<p>list works!</p>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Order Date</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of (orders | async)">
+                <td>{{ order.id }}</td>
+                <td>{{ order.created_at | date: 'short' }}</td>
+                <td>{{ order.product_name }}</td>
+                <td>{{ order.price }}</td>
+                <td>{{ order.quantity }}</td>
+                <td>{{ order.total }}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteOrder(order.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

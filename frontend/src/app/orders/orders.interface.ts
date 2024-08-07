@@ -1,6 +1,7 @@
 export interface Orders {
   id: number;
-  product_id: number;
+  product_name: number;
+  price: number;
   quantity: number;
   total: number;
   created_at: string;
