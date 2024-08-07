@@ -1,1 +1,22 @@
-<p>list works!</p>
+<div class="create-button-container d-flex justify-content-end p-2">
+    <a routerLink="/products/create" class="btn btn-success">Create</a>
+</div>
+
+<div class="d-flex flex-wrap">
+
+    <div class="card" style="width: 18rem; margin-right: 10px; margin-bottom: 10px;"
+    *ngFor="let product of (products | async);">
+        <img src="assets/product-placeholder.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{product?.name}}</h5>
+            <p class="card-text">{{product?.description}}</p>
+            <div class="button-container d-flex p-2 justify-content-between">
+                <a routerLink="/products/update/product.id" class="btn btn-primary">Edit</a>
+                <a class="btn btn-danger" (click)="onDelete(product.id)">Delete</a>
+                <a routerLink="/products/product.id" class="btn btn-success">Show</a>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
