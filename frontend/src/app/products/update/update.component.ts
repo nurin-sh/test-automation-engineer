@@ -13,16 +13,27 @@ export class UpdateComponent implements OnInit {
 
   updateProductForm = new FormGroup({
     name: new FormControl('', Validators.required),
-    price: new FormControl('', Validators.required),
+    price: new FormControl(0, Validators.required),
     description: new FormControl('', Validators.required),
   });
-
   productId = parseInt(this.route.snapshot.paramMap.get('productId') as string)
 
   constructor(private router: Router, private productService: ProductsService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.updateForm();
 
+  }
+
+  updateForm() {
+    this.productService.getProductById(this.productId).subscribe(product => {
+      console.log(product);
+      this.updateProductForm.setValue({
+        name: product.name,
+        price: product.price,
+        description: product.description
+      });
+    });
   }
 
   onUpdate() {
