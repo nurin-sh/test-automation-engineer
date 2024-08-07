@@ -6,6 +6,7 @@ import { ListComponent } from './list/list.component';
 import { ShowComponent } from './show/show.component';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,6 +18,8 @@ import { UpdateComponent } from './update/update.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     ProductsRoutingModule
   ]
 })
