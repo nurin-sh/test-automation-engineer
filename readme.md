@@ -19,6 +19,7 @@ https://nodejs.org/en/download/package-manager
     npm install
     ng serve
 ```
+visit `localhost:4200`
 
 6. setup backend (Open new terminal)
 ```
@@ -26,8 +27,8 @@ https://nodejs.org/en/download/package-manager
     cd backend
     npm install
     nest start --watch
-
 ```
+visit `localhost:3000`
 
 ## Frontend Test
 
@@ -54,7 +55,7 @@ https://nodejs.org/en/download/package-manager
     - update product
     - delete product
 
-note: swagger api available at localhost:3000
+note: swagger api available at `localhost:3000/api`
 
 
 ## Submitting your test
