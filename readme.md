@@ -6,19 +6,28 @@ https://nodejs.org/en/download/package-manager
 
 2. Install Angular CLI
 ```npm install -g @angular/cli@14```
+
 3. Install Nestjs CLI
 ```npm install -g @nestjs/cli```
-4. git clone
-```git@github.com:letsrotate/test-automation-engineer.git```
-5. cd test-automation-engineer
-6. cd frontend 
-7. npm install
-8. ng serve
-9. Open another tab in your terminal
-10. cd test-automation-engineer
-11. npm install
-12. nest start --watch
 
+4. Fork the repository and clone it to your laptop 
+
+5. setup frontend
+```
+    cd test-automation-engineer
+    cd frontend
+    npm install
+    ng serve
+```
+
+6. setup backend (Open new terminal)
+```
+    cd test-automation-engineer
+    cd backend
+    npm install
+    nest start --watch
+
+```
 
 ## Frontend
 
@@ -39,3 +48,9 @@ https://nodejs.org/en/download/package-manager
 
 2. Create a unit test for Product Service
    backend/src/products/products.controller.spec.ts
+
+
+## Submitting your test
+
+1. after you have completed and tested your work, please submit your repository to below email:
+career@letsrotate.com
