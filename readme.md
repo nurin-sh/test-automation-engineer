@@ -54,6 +54,8 @@ https://nodejs.org/en/download/package-manager
     - update product
     - delete product
 
+note: swagger api available at localhost:3000
+
 
 ## Submitting your test
 
