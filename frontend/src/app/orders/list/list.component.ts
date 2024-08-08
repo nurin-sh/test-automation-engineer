@@ -15,6 +15,10 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  deleteOrder(id: number) {}
+  deleteOrder(id: number) {
+    this.ordersService.deleteOrder(id).subscribe(() => {
+      this.orders = this.ordersService.getOrders();
+    });
+  }
 
 }
