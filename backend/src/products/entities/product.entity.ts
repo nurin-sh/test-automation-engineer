@@ -12,32 +12,62 @@ export class Product {
       {
         id: 1,
         name: 'Red Apple',
-        description: 'Description 1',
+        description: 'Sweet and juicy red apples.',
         price: 5
       },
       {
         id: 2,
         name: 'Watermelon',
-        description: 'Description 2',
+        description: 'Cooling and refreshing watermelons.',
         price: 10
       },
       {
         id: 3,
         name: 'Pear',
-        description: 'Description 3',
+        description: 'Sweet ripe pear.',
         price: 6
       },
       {
         id: 4,
         name: 'Orange',
-        description: 'Description 4',
+        description: 'Sweet and juicy oranges.',
         price: 4
       },
       {
         id: 5,
         name: 'Papaya',
-        description: 'Description 5',
+        description: 'Amazingly sweet and delicious papayas.',
         price: 8
+      },
+      {
+        id: 6,
+        name: 'Banana',
+        description: 'Sweet and delicious bananas.',
+        price: 3
+      },
+      {
+        id: 7,
+        name: 'Mango',
+        description: 'Sweet and delicious mangoes.',
+        price: 7
+      },
+      {
+        id: 8,
+        name: 'Pineapple',
+        description: 'Sweet and juicy pineapples.',
+        price: 9
+      },
+      {
+        id: 9,
+        name: 'Grapes',
+        description: 'Sweet and juicy grapes.',
+        price: 6
+      },
+      {
+        id: 10,
+        name: 'Strawberry',
+        description: 'Sweet and delicious strawberries.',
+        price: 5
       }
     ];
 
