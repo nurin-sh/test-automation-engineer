@@ -1,3 +1,4 @@
+import { NotFoundException } from "@nestjs/common";
 import { CreateProductDto } from "../dto/create-product.dto";
 import { ProductsInterface } from "../dto/products.interface";
 import { UpdateProductDto } from "../dto/update-product.dto";
@@ -54,17 +55,27 @@ export class Product {
   }
 
   getProductById(id: number) {
-    return this.products.find(product => product.id === id);
+    const product = this.products.find(product => product.id === id);
+    if (!product) {
+      throw new NotFoundException(`Product with id ${id} not found`);
+    }
+    return product;
   }
 
   updateProduct(id: number, product: UpdateProductDto) {
     const index = this.products.findIndex(product => product.id === id);
+    if (index === -1) {
+      throw new NotFoundException(`Product with id ${id} not found`);
+    }
     this.products[index] = { ...this.products[index], ...product };
     return this.products[index];
   }
 
   deleteProduct(id: number) {
     const index = this.products.findIndex(product => product.id === id);
+    if (index === -1) {
+      throw new NotFoundException(`Product with id ${id} not found`);
+    }
     this.products.splice(index, 1);
     return this.products;
   }

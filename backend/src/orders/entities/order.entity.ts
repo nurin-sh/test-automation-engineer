@@ -2,6 +2,7 @@ import { Product } from "src/products/entities/product.entity";
 import { CreateOrderDto } from "../dto/create-order.dto";
 import { OrderInterface } from "../dto/order.interface";
 import { UpdateOrderDto } from "../dto/update-order.dto";
+import { NotFoundException } from "@nestjs/common";
 
 export class Order {
     private orders: OrderInterface[] = [];
@@ -23,17 +24,27 @@ export class Order {
   }
 
   getOrderById(id: number) {
-    return this.orders.find(order => order.id === id);
+    const order = this.orders.find(order => order.id === id);
+    if (!order) {
+      throw new NotFoundException(`Order with id ${id} not found`);
+    } 
+    return order;
   }
 
   updateOrder(id: number, order: UpdateOrderDto) {
     const index = this.orders.findIndex(order => order.id === id);
+    if (index === -1) {
+      throw new NotFoundException(`Product with id ${id} not found`);
+    }
     this.orders[index] = { ...this.orders[index], ...order };
     return this.orders[index];
   }
 
   deleteOrder(id: number) {
     const index = this.orders.findIndex(order => order.id === id);
+    if (index === -1) {
+      throw new NotFoundException(`Product with id ${id} not found`);
+    }
     this.orders.splice(index, 1);
     return this.orders;
   }
