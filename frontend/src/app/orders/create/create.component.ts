@@ -21,7 +21,7 @@ export class CreateComponent implements OnInit {
     product_id: new FormControl(this.productId, Validators.required),
     product_name: new FormControl(''),
     product_description: new FormControl(''),
-    product_price: new FormControl(0),
+    price: new FormControl(0),
     quantity: new FormControl('', Validators.required),
     updated_at: new FormControl(''),
     created_at: new FormControl(''),
@@ -38,13 +38,13 @@ export class CreateComponent implements OnInit {
       this.createOrderForm.patchValue({
         product_id: product.id,
         product_name: product.name,
-        product_price: product.price,
+        price: product.price,
         product_description: product.description,
       })
 
       this.createOrderForm.get('product_name')?.disable();
       this.createOrderForm.get('product_description')?.disable();
-      this.createOrderForm.get('product_price')?.disable();
+      this.createOrderForm.get('price')?.disable();
   }
 
   onCreate() {
@@ -53,6 +53,8 @@ export class CreateComponent implements OnInit {
       alert('Please fill all the required fields to create an order');
       return;
     }
+    this.createOrderForm.get('product_name')?.enable();
+    this.createOrderForm.get('price')?.enable();
     this.createOrderForm.get('updated_at')?.setValue(new Date().toISOString());
     this.createOrderForm.get('created_at')?.setValue(new Date().toISOString());
     this.orderService.createOrder(this.createOrderForm.value as unknown as CreateOrder).subscribe(() => {
