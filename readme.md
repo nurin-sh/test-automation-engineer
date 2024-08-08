@@ -60,5 +60,4 @@ note: swagger api available at `localhost:3000/api`
 
 ## Submitting your test
 
-1. after you have completed and tested your work, please submit your repository to below email:
-career@letsrotate.com
+1. after you have completed and tested your work, please submit a link of our repository to the hiring manager.
