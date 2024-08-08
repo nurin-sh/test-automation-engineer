@@ -28,6 +28,28 @@ export class CreateOrderDto {
 
     @ApiProperty(
         {
+            type: String,
+            description: 'Name of Product',
+            required: true,
+            default: 'Product Name'
+        }
+    )
+    @IsString()
+    product_name: string;
+
+    @ApiProperty(
+        {
+            type: Number,
+            description: 'Price of the product',
+            required: true,
+            default: 100
+        }
+    )
+    @IsNumber()
+    price: number;
+
+    @ApiProperty(
+        {
             type: Number,
             description: 'DateTime',
             required: true,

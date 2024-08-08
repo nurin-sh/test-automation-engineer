@@ -6,6 +6,6 @@ import { Product } from './entities/product.entity';
 @Module({
   controllers: [ProductsController],
   providers: [ProductsService, Product],
-  // exports: [ProductsService]
+  exports: [ProductsService, Product]
 })
 export class ProductsModule {}

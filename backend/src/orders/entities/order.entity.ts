@@ -1,3 +1,4 @@
+import { Product } from "src/products/entities/product.entity";
 import { CreateOrderDto } from "../dto/create-order.dto";
 import { OrderInterface } from "../dto/order.interface";
 import { UpdateOrderDto } from "../dto/update-order.dto";
@@ -7,14 +8,13 @@ export class Order {
 
   constructor() {
     this.orders = [];
-
   }
 
   createOrder(order: CreateOrderDto) {
     const ids = this.orders.map(order => order.id).sort((a, b) => a - b).reverse();
     console.log(ids);
     const newId = ids.length === 0 ? 1 : ids[0] + 1;
-    this.orders.push({...order, id: newId });
+    this.orders.push({...order, id: newId, total: order.price * order.quantity});
     return order;
   }
   
