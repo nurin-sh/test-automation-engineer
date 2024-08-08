@@ -29,7 +29,7 @@ https://nodejs.org/en/download/package-manager
 
 ```
 
-## Frontend
+## Frontend Test
 
 1. Create a unit test for Product Service
    frontend/src/app/products/products.service.spec.ts
@@ -41,13 +41,18 @@ https://nodejs.org/en/download/package-manager
     - As a user I am able to edit my product
     - As a user I am able to place an order
 
-## Backend
+## Backend Test
 
 1. Create a unit test for Product Controller
    backend/src/products/products.controller.spec.ts
 
 2. Create a unit test for Product Service
    backend/src/products/products.controller.spec.ts
+
+3. Write an integration test to test for:
+    - create product
+    - update product
+    - delete product
 
 
 ## Submitting your test
