@@ -48,7 +48,7 @@ visit `localhost:3000`
    backend/src/products/products.controller.spec.ts
 
 2. Create a unit test for Product Service
-   backend/src/products/products.controller.spec.ts
+   backend/src/products/products.service.spec.ts
 
 3. Write an integration test to test for:
     - create product
