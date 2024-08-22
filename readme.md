@@ -28,7 +28,7 @@ visit `localhost:4200`
     npm install
     nest start --watch
 ```
-visit `localhost:3000`
+visit `localhost:3000/api`
 
 ## Frontend Test
 
