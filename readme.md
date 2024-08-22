@@ -41,6 +41,7 @@ visit `localhost:3000/api`
 3. Create a cypress e2e test to test the following:
     - As a user I am able to edit my product
     - As a user I am able to place an order
+   (If you are not familiar with cypress, use the testing framework you are familiar with.)
 
 ## Backend Test
 
