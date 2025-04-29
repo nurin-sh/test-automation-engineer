@@ -24,9 +24,9 @@ visit `localhost:4200`
 ```
 visit `localhost:3000/api`
 
-## Test Cases
+## Functional Test Cases
 
-- Run the application and look into the functionalities. Write test cases to test this application. Commit your test cases in the root of project. We are curious about your approach and documentation style, so use any tool or document type you prefer.
+- Run the application and look into the functionalities. Write functional test cases to test this application. Commit your test cases in the root of project. We are curious about your approach and documentation style, so use any tool or document type you prefer.
 
 ## Frontend (E2E) Tests
 
