@@ -1,4 +1,4 @@
-## This is a test for Test Automation Engineer
+## This is a test for Software Quality Assurance Engineer
 
 ## Setup
 1. Make sure Node is installed
