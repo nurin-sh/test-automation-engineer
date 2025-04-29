@@ -24,17 +24,17 @@ visit `localhost:4200`
 ```
 visit `localhost:3000/api`
 
-## Test Plan
+## Test Cases
 
-- Run the application and look into the functionalities. Write a test plan (and strategy) to test this application. Commit your plan in the root of project. We are curious about your approach and documentation style, so use any tool or document type you prefer. Also focus a bit on developing a process for QA (e.g. release process, testing, bugs, recommendations).
+- Run the application and look into the functionalities. Write test cases to test this application. Commit your test cases in the root of project. We are curious about your approach and documentation style, so use any tool or document type you prefer.
 
 ## Frontend (E2E) Tests
 
-- Create Cypress e2e tests for the most important cases in your test plan. Feel free to use any other framework if you're unfamiliar with Cypress. Commit your tests into the repository.
+- Create Cypress e2e tests for the most important cases in your test cases above. If you have no experience with Cypress, feel free to use Google / refer to any documentation. Avoid using AI. Commit your tests into the repository.
 
 ## Backend/API (Integration) Tests
 
-- Create integration tests for the most important backend API tests from your test plan. Use tools that you're familiar with. Commit your tests into the repository. Feel free to also use Cypress, but anything other tool is acceptable.
+- Create integration tests for the most important backend API tests from your test cases. Use tools that you're familiar with. Commit your tests into the repository. Feel free to also use Cypress, but anything other tool is acceptable.
 
 note: swagger api available at `localhost:3000/api`
 
